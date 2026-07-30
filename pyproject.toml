@@ -1,16 +1,20 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "gtm-mcp"
 version = "0.1.0"
+description = "Google Tag Manager MCP server with OAuth authentication"
+requires-python = ">=3.10"
 dependencies = [
-    "mcp>=1.0.0",
-    "google-api-python-client>=2.0.0",
-    "google-auth>=2.0.0",
-    "uvicorn>=0.20.0"
+    "fastmcp>=3.1.0",
+    "httpx>=0.28.1",
+    "google-api-python-client>=2.0.0"
 ]
 
 [project.scripts]
-gtm_mcp = "gtm_mcp.__main__:main"
+gtm-mcp = "gtm_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtm_mcp"]
