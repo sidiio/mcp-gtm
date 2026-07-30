@@ -12,4 +12,4 @@ dependencies = [
 ]
 
 [project.scripts]
-gtm_mcp = "gtm_mcp:main"
+gtm_mcp = "gtm_mcp.__main__:main"
