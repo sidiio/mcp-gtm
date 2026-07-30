@@ -11,4 +11,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD ["python", "src/gtm_mcp/__main__.py"]
+CMD ["gtm_mcp"]
